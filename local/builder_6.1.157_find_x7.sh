@@ -375,12 +375,12 @@ echo ">>> 克隆OPPO内核模块仓库..."
 cd "$WORKDIR/kernel_workspace"
 git clone --depth=1 https://github.com/oppo-source/android_kernel_modules_oppo_mt6989 -b oppo/mt6989_b_16.0.0_find_x7 modules
 echo ">>> 复制vendor目录到内核树..."
-cp -r modules/vendor common/vendor
+cp -r modules/vendor vendor
 echo ">>> 验证符号链接是否解析..."
 cd ./common
 ls -la drivers/soc/oplus/
 echo ">>> vendor目录复制完成！"
-du -sh vendor/
+du -sh ../vendor/
 cd ..
 
 # ===== 编译内核 =====
